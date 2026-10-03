@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urethanase-boltz2"
+version = "0.1.0"
+description = "Reproducible Boltz-2 benchmark on an experimental UMG-SP2 urethanase-ligand complex"
+requires-python = ">=3.10"
+dependencies = ["biopython>=1.83", "numpy>=1.26", "requests>=2.31", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+urethanase-boltz2 = "urethanase_boltz2.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
