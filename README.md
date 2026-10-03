@@ -1,5 +1,7 @@
 # Urethanase-Boltz2
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jjimenezgar/Urethanase-Boltz2/blob/main/notebooks/Urethanase_Boltz2_Colab.ipynb)
+
 A small, reproducible structural-ML benchmark asking whether **Boltz-2** can recover the experimentally observed binding mode of a polyurethane-relevant carbamate substrate in the urethanase **UMG-SP2**.
 
 ## Scientific question
