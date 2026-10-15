@@ -1,8 +1,26 @@
+# Local environments and generated Python files
 .venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-data/reference/*.cif
+*.egg-info/
+
+# Model assets, scratch files and local archives
+.cache/
+.tmp/
+archive/
+dist/
+/logs/
+data/msa/*.csv
 data/reference/*.fasta
+
+# Include only the curated benchmark results
 results/*
 !results/.gitkeep
+!results/report/
+!results/multiseed/
+!results/validation/
+results/multiseed/controller.lock
+results/multiseed/download_ready
+results/multiseed/download.log
+results/multiseed/remote_status.json

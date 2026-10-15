@@ -1,0 +1,15 @@
+# Keep source and documentation portable across platforms.
+* text=auto eol=lf
+
+# Preserve exact scientific artifact bytes and original file formatting.
+*.cif -text -whitespace linguist-generated=true
+*.log -text -whitespace linguist-generated=true
+*.gz binary
+*.npz binary
+*.png binary
+
+# Collapse generated run metadata in GitHub reviews.
+results/**/manifest.json linguist-generated=true
+cluster/environment.freeze.txt linguist-generated=true
+# CSV writers may emit CRLF; retain bytes covered by published checksums.
+*.csv -text -whitespace

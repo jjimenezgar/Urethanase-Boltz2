@@ -1,0 +1,27 @@
+{
+  "jobs": {
+    "batch_1": "7693078",
+    "batch_2": "7693079",
+    "batch_3": "7693384"
+  },
+  "status": "complete",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "active_user_test_jobs": [],
+  "job_states": {
+    "batch_1": "COMPLETED",
+    "batch_2": "COMPLETED",
+    "batch_3": "COMPLETED"
+  },
+  "updated_utc": "2026-10-15T10:50:19.022799+00:00"
+}

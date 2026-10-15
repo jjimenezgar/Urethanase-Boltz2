@@ -14,3 +14,5 @@ jobs:
           python-version: "3.11"
       - run: pip install -e ".[dev]"
       - run: pytest -m "not integration"
+      - name: Verify saved artifacts and reproduce all ten metric sets
+        run: python scripts/verify_benchmark.py

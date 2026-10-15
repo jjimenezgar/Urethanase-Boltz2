@@ -1,0 +1,59 @@
+Wed Oct 14 16:21:04 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:57:00.0 Off |                    0 |
+| N/A   36C    P0             57W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+2.5.1+cu124 True
+......                                                                   [100%]
+6 passed, 1 deselected in 0.62s
+[rank: 0] Seed set to 42
+MSA server enabled: https://api.colabfold.com
+MSA server authentication: no credentials provided
+Downloading the CCD data to /scratch/jcjimenez/Urethanase-Boltz2-benchmark/.cache/boltz/mols.tar. This may take a bit of time. You may change the cache directory with the --cache flag.
+Extracting the CCD data to /scratch/jcjimenez/Urethanase-Boltz2-benchmark/.cache/boltz/mols. This may take a bit of time. You may change the cache directory with the --cache flag.
+Downloading the Boltz-2 weights to /scratch/jcjimenez/Urethanase-Boltz2-benchmark/.cache/boltz/boltz2_conf.ckpt. You may change the cache directory with the --cache flag.
+Downloading the Boltz-2 affinity weights to /scratch/jcjimenez/Urethanase-Boltz2-benchmark/.cache/boltz/boltz2_aff.ckpt. You may change the cache directory with the --cache flag.
+Checking input data.
+Processing 1 inputs with 1 threads.
+  0%|          | 0/1 [00:00<?, ?it/s]Generating MSA for inputs/umg_sp2_a1d5h.yaml with 1 protein entities.
+Calling MSA server for target umg_sp2_a1d5h with 1 sequences
+MSA server URL: https://api.colabfold.com
+MSA pairing strategy: greedy
+No authentication provided for MSA server
+
+  0%|          | 0/150 [elapsed: 00:00 remaining: ?][A
+SUBMIT:   0%|          | 0/150 [elapsed: 00:00 remaining: ?][A
+COMPLETE:   0%|          | 0/150 [elapsed: 00:00 remaining: ?][A
+COMPLETE: 100%|██████████| 150/150 [elapsed: 00:00 remaining: 00:00][ACOMPLETE: 100%|██████████| 150/150 [elapsed: 00:02 remaining: 00:00]
+100%|██████████| 1/1 [00:07<00:00,  7.55s/it]100%|██████████| 1/1 [00:07<00:00,  7.55s/it]
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+/scratch/jcjimenez/Urethanase-Boltz2-benchmark/.venv/lib/python3.12/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+Running structure prediction for 1 input.
+/scratch/jcjimenez/Urethanase-Boltz2-benchmark/.venv/lib/python3.12/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0
+You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]Predicting DataLoader 0: 100%|██████████| 1/1 [00:27<00:00,  0.04it/s]Number of failed examples: 0
+Predicting DataLoader 0: 100%|██████████| 1/1 [00:27<00:00,  0.04it/s]
+Traceback (most recent call last):
+  File "/scratch/jcjimenez/Urethanase-Boltz2-benchmark/scripts/run_benchmark.py", line 40, in <module>
+    raise RuntimeError(f'Expected exactly one model_0 CIF, found {len(predictions)}')
+RuntimeError: Expected exactly one model_0 CIF, found 0

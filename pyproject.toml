@@ -11,6 +11,7 @@ dependencies = ["biopython>=1.83", "numpy>=1.26", "requests>=2.31", "PyYAML>=6.0
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+report = ["matplotlib>=3.8"]
 
 [project.scripts]
 urethanase-boltz2 = "urethanase_boltz2.cli:main"

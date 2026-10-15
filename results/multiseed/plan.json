@@ -1,0 +1,10 @@
+{
+  "baseline_seed": 42,
+  "additional_seeds": [43,44,45,46,47,48,49,50,51],
+  "batches": [[43,44,45],[46,47,48],[49,50,51]],
+  "qos": "test",
+  "time_limit": "00:10:00",
+  "max_active_test_jobs_for_user": 2,
+  "protocol": "One sample per seed; same stored MSA, Boltz 2.2.1, 3 recycles, 200 diffusion steps, no kernels, no templates or pocket constraints",
+  "selection": "All ten seeds reported, including baseline; no reference-based selection"
+}
