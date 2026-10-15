@@ -9,7 +9,9 @@ Local duplicate outputs have been preserved under ignored `archive/local-runs/`.
 The working folder supplied to this session has no usable Git metadata. The
 update was therefore also assembled in a separate clone of
 `https://github.com/jjimenezgar/Urethanase-Boltz2`, based on commit `5d432b4`.
-Nothing has been pushed or published.
+The completed update was published to `main` on 15 October 2026 in
+[commit 64ebb0c](https://github.com/jjimenezgar/Urethanase-Boltz2/commit/64ebb0c329dd77a77d3178157568edfddbac62d5).
+The instructions below preserve the preparation workflow for the local ZIP.
 
 ## Apply in a normal Git checkout
 
